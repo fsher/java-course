@@ -14,7 +14,7 @@ public class ExerciseTwo {
         System.out.print("What number should I find: ");
         int number = scanner.nextInt();
 
-        int[] arr = ExerciseTwo.generateArray(size);
+        int[] arr = generateArray(size);
         Arrays.sort(arr);
         System.out.println("Generated and sorted array: " + Arrays.toString(arr));
 
@@ -32,7 +32,7 @@ public class ExerciseTwo {
         System.out.printf("Binary Search. %d: %s. It took: %d nano-seconds.\n", number, result, end - start);
     }
 
-    static int[] generateArray(int size) {
+    public static int[] generateArray(int size) {
         int[] array = new int[size];
         int min = -size;
 
