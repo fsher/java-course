@@ -13,14 +13,10 @@ public class Exercise5 {
             throw new Error("Number of disks can't be less than 1");
         }
 
-        HanoiTowers ht1 = new HanoiTowers(n);
-        HanoiTowers ht2 = new HanoiTowers(n + 1);
-        HanoiTowers ht3 = new HanoiTowers(n + 2);
+        System.out.printf("Number of moves for %d disks: %d\n\n", n, HanoiTowers.hanoi(n,'A', 'C', 'B'));
+        System.out.printf("Number of moves for %d disks: %d\n\n", n, HanoiTowers.hanoi(n,'A', 'C', 'B'));
 
-        System.out.printf("Number of moves for %d disks: %d\n\n", n, ht1.hanoi('A', 'C', 'B'));
-        System.out.printf("Number of moves for %d disks: %d\n\n", n, ht1.hanoi('A', 'C', 'B'));
-
-        System.out.printf("Number of moves for %d disks: %d\n\n", n + 1, ht2.hanoi('A', 'C', 'B'));
-        System.out.printf("Number of moves for %d disks: %d\n\n", n + 2, ht3.hanoi('A', 'C', 'B'));
+        System.out.printf("Number of moves for %d disks: %d\n\n", n + 1, HanoiTowers.hanoi(n + 1,'A', 'C', 'B'));
+        System.out.printf("Number of moves for %d disks: %d\n\n", n + 2, HanoiTowers.hanoi(n + 2, 'A', 'C', 'B'));
     }
 }
