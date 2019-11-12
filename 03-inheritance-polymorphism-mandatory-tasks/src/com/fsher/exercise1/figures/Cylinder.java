@@ -1,7 +1,7 @@
 package com.fsher.exercise1.figures;
 
 public class Cylinder extends Circle {
-    double height;
+    private double height;
 
     public Cylinder() {}
 
@@ -33,11 +33,11 @@ public class Cylinder extends Circle {
 
     @Override
     public double getArea() {
-        return Math.PI * 2 * radius * height + 2 * super.getArea();
+        return Math.PI * 2 * getRadius() * height + 2 * super.getArea();
     }
 
     @Override
     public String toString() {
-        return "Cylinder: radius: " + radius + ", height: " + height + ", colour: " + colour;
+        return "Cylinder: radius: " + getRadius() + ", height: " + height + ", colour: " + getColour();
     }
 }

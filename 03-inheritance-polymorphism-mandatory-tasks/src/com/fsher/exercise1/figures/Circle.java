@@ -1,8 +1,8 @@
 package com.fsher.exercise1.figures;
 
 public class Circle {
-    double radius;
-    String colour;
+    private double radius;
+    private String colour;
 
     public Circle() {}
 
