@@ -7,19 +7,22 @@ import com.fsher.exercise2.figures.Square;
 
 public class ExerciseTwo {
     public static void main(String[] args) {
-        Shape shape = new Shape("orange", false);
-        System.out.println(shape);
+        Shape[] shapes = {
+                new Circle(2, "orange", false),
+                new Rectangle(),
+                new Square(4, "red", true)};
 
-        Circle circle = new Circle();
-        System.out.println(circle);
-        System.out.printf("Area: %f\n", circle.getArea());
+        for (Shape shape : shapes) {
+            System.out.println(shape);
 
-        Rectangle rectangle = new Rectangle();
-        System.out.println(rectangle);
-        System.out.printf("Perimeter: %f\n", rectangle.getPerimeter());
+            if (shape instanceof Circle) {
+                System.out.printf("Area: %f\n", ((Circle) shape).getArea());
+                continue;
+            }
 
-        Square square = new Square(4, "red", true);
-        System.out.println(square);
-        System.out.printf("Perimeter: %f\n", square.getPerimeter());
+            if (shape instanceof Rectangle) {
+                System.out.printf("Perimeter: %f\n", ((Rectangle) shape).getPerimeter());
+            }
+        }
     }
 }

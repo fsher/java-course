@@ -30,13 +30,9 @@ public class Shape {
         this.filled = filled;
     }
 
-    private String getFilledString() {
-        return filled ? "filled" : "not filled";
-    }
-
     @Override
     public String toString() {
-        return String.format("A Shape with the colour %s and %s", colour, getFilledString());
+        return String.format("A Shape with the colour %s and %s", colour, filled ? "filled" : "not filled");
     }
 }
 

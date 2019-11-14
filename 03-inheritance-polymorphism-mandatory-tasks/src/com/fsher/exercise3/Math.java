@@ -1,7 +1,7 @@
 package com.fsher.exercise3;
 
 public class Math {
-    static int min(int[] array) {
+    public static int min(int[] array) {
         if (array.length == 0) {
             return 0;
         }
@@ -16,7 +16,7 @@ public class Math {
         return min;
     }
 
-    static double min(double[] array) {
+    public static double min(double[] array) {
         if (array.length == 0) {
             return 0;
         }
@@ -31,7 +31,7 @@ public class Math {
         return min;
     }
 
-    static int max(int[] array) {
+    public static int max(int[] array) {
         if (array.length == 0) {
             return 0;
         }
@@ -46,7 +46,7 @@ public class Math {
         return max;
     }
 
-    static double max(double[] array) {
+    public static double max(double[] array) {
         if (array.length == 0) {
             return 0;
         }
@@ -61,7 +61,7 @@ public class Math {
         return max;
     }
 
-    static int nextAfter(int[] array, int number) {
+    public static int nextAfter(int[] array, int number) {
         if (array.length == 0) {
             return 0;
         }
@@ -75,7 +75,7 @@ public class Math {
         return 0;
     }
 
-    static double nextAfter(double[] array, double number) {
+    public static double nextAfter(double[] array, double number) {
         if (array.length == 0) {
             return 0;
         }
@@ -89,7 +89,7 @@ public class Math {
         return 0;
     }
 
-    static int pow(int number, int power) {
+    public static int pow(int number, int power) {
         switch (power) {
             case 0:
                 return 1;
@@ -100,7 +100,7 @@ public class Math {
         }
     }
 
-    static double pow(double number, int power) {
+    public static double pow(double number, int power) {
         switch (power) {
             case 0:
                 return 1;
