@@ -40,6 +40,6 @@ public class MovableRectangle implements Movable {
 
     @Override
     public String toString() {
-        return "Movable Rectangle: topLeft: " + topLeft + ", bottomRight: " + bottomRight;
+        return String.format("Movable Rectangle: topLeft: %s, bottomRight: %s", topLeft, bottomRight);
     }
 }
