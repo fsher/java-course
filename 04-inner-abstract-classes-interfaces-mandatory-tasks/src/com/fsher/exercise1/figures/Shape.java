@@ -1,6 +1,6 @@
 package com.fsher.exercise1.figures;
 
-public class Shape {
+public abstract class Shape {
     private String colour;
     private boolean filled;
 
@@ -29,6 +29,12 @@ public class Shape {
     public void setFilled(boolean filled) {
         this.filled = filled;
     }
+
+    public abstract double getArea();
+
+    public abstract double getPerimeter();
+
+    public abstract boolean isInside(double x, double y);
 
     @Override
     public String toString() {

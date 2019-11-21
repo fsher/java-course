@@ -38,8 +38,19 @@ public class Rectangle extends Shape {
         this.length = length;
     }
 
+    @Override
     public double getPerimeter() {
         return (width + length) * 2;
+    }
+
+    @Override
+    public double getArea() {
+        return width * length;
+    }
+
+    @Override
+    public boolean isInside(double x, double y) {
+        return Math.abs(x) < length / 2 && Math.abs(y) < width / 2;
     }
 
     @Override

@@ -26,8 +26,19 @@ public class Circle extends Shape {
         return radius;
     }
 
+    @Override
     public double getArea() {
         return Math.PI * Math.pow(radius, 2);
+    }
+
+    @Override
+    public double getPerimeter() {
+        return 2 * Math.PI * radius;
+    }
+
+    @Override
+    public boolean isInside(double x, double y) {
+        return Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)) < radius;
     }
 
     @Override
