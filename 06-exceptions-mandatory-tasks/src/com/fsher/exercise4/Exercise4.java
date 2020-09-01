@@ -17,12 +17,12 @@ public class Exercise4 {
         try (scanner) {
             int number = scanner.nextInt();
             System.out.printf("Here is your number: %d \n", Exercise4.checkNumber(number));
-        } catch (Exception e) {
+        } catch (TooLargeNumberException | TooLowNumberException e) {
             System.out.println(e.getMessage());
         }
     }
 
-    public static int checkNumber(int num) throws Exception {
+    public static int checkNumber(int num) throws TooLargeNumberException, TooLowNumberException {
         if (num > MAX) {
             throw new TooLargeNumberException(MAX);
         }
