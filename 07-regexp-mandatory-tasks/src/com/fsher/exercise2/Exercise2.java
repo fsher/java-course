@@ -6,7 +6,7 @@ public class Exercise2 {
     public static void main(String[] args) {
         System.out.println(
                 REGEXP_STRING
-                        .replaceAll("(^[\\s]+)|([\\s]+$)", "")
+                        .replaceAll("(^\\s+)|(\\s+$)", "")
                         .replaceAll("(\\s{2,})", " ")
         );
     }
